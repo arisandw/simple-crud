@@ -24,8 +24,10 @@ $result = $mysqli->query($sql);
         <th>No</th>
         <th>NIM</th>
         <th>Nama</th>
+        <th>Fakultas</th>
         <th>Program Studi</th>
         <th>Semester</th>
+        <th>Alamat</th>
         <th>Aksi</th>
       </tr>
     </thead>
@@ -38,8 +40,10 @@ $result = $mysqli->query($sql);
           <td style="text-align: center;"><?= $no++; ?></td>
           <td style="text-align: center;"><?= $row['nim']; ?></td>
           <td style="text-align: center;"><?= $row['nama']; ?></td>
+          <td style="text-align: center;"><?= $row['fakultas']; ?></td>
           <td style="text-align: center;"><?= $row['prodi']; ?></td>
           <td style="text-align: center;"><?= $row['semester']; ?></td>
+          <td style="text-align: center;"><?= $row['alamat']; ?></td>
           <td style="text-align: center;">
             <a href="edit.php?id=<?= $row['id']; ?>" class="btn-edit">Edit</a>
             <a href="delete.php?id=<?= $row['id']; ?>" class="btn-delete" onclick="return confirm('Yakin Ingin Menghapus Data Ini?')">Hapus</a>
